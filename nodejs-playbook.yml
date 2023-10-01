@@ -1,3 +1,4 @@
+# this playbook installs nodejs on ubuntu  and add gpg key
 ---
 - hosts: all
   gather_facts: yes
@@ -15,7 +16,7 @@
         - curl
         - software-properties-common
 
-    - name: fix GPG key
+    - name: add GPG key
       shell: "curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -"
 
     - name: Add NodeSource repository
